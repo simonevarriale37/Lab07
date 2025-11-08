@@ -11,6 +11,9 @@ def main(page: ft.Page):
     my_controller = Controller(my_view, my_model)
     my_view.set_controller(my_controller)
     my_view.load_interface()
+    # Aggiungo il metodo del controller per riempire i dropdown della view con i dati
+    # presi dal database
+    my_controller.popola_dropdown()
 
 
 ft.app(target=main)
